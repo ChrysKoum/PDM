@@ -1,0 +1,114 @@
+
+/* Navbar */
+#nav{
+    background-color: #E2E2E2;
+}
+.container #image{
+    width: 100px;
+}
+.body{
+    background-color: #E2E2E2;
+}
+.collapse .navbar-nav{
+    font-size: 23px;
+}
+
+#navbarNavAltMarkup .navbar-nav{
+    color: black;
+}
+
+#navbarNavAltMarkup .navbar-nav .active{
+    color: #007E3A;
+}
+
+.container .navbar-brand{
+    font-size: 30px;
+}
+
+#navbarNavAltMarkup .navbar-nav .nav-link:hover{
+    color: #2BBD7E;
+}
+
+#nav a:hover{
+    color: #2BBD7E;
+}
+
+#image{
+    width: 130px;
+    
+}
+
+.container .navbar-toggler{
+    color: #007e3a;
+}
+
+/* Add a background color transition to the navbar */
+.navbar {
+    transition: background-color 0.5s ease-in-out;
+  }
+  
+  /* Define the new background color for the navbar when scrolled */
+  #nav.scrolled {
+    background-color: hwb(60 69% 30%);
+    
+  }
+
+  .nav-link:hover {
+    color: #2BBD7E !important;
+  }
+
+  .navbar-nav a.active {
+    color: #f00; /* Change the color to the desired color */
+  }
+
+/* End Navbar */
+
+#test{
+    font-size: 100px;
+}
+
+/* Footer */
+
+.card .card-body img{
+    width: 100px;
+}
+
+.card .card-body{
+    background-color: #E2E2E2;
+}
+
+.card  .card-body .nav a{
+    color: black;
+}
+
+.card  .card-body .nav a:hover{
+    color: #007e3a;
+}
+
+.nav li{
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.nav .space {
+    color: gray;
+    display: inline-block;
+    margin-right: 150px; /* add some space between the list items */
+  }
+
+  .nav .space2{
+    color: gray;
+  }
+  
+.nav p {
+    margin-bottom: 10px; /* add some space between the paragraphs */
+}
+  
+/* End Footer */
+
+@media (min-width: 1400px){
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
+        max-width: 2190px;
+    }
+}
+
