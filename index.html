@@ -22,32 +22,25 @@
 <body>
     <!-- ======= Header ======= -->
     <header>
-        <nav class="navbar navbar-expand-lg">
+        <nav id="nav" class="navbar navbar-expand-lg fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="#"><img id="image" src="Assets/logo/logo-PDM-small.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
-                        </li>
-                    </ul>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="#about-us">About Us</a>
+                        <a class="nav-link" href="/dashboard.html">Our Project</a>
+                        <a class="nav-link" href="/contact">Contact</a>
+                        <a class="nav-link" href="/gr">GR/ENG</a>
+                    </div>
                 </div>
             </div>
         </nav>
-
     </header>
     <!-- End Header -->
 
@@ -60,8 +53,8 @@
                         alt="beutiful plant">
                     <h1 class="hero-title">Take Care of<br>Your <span class="plant">Plant</span>
                         With<br>Techonology</h1>
-                    <img id="white-circle" src="assets/White-Circle.png" alt="white circle">
-                    <h3 class="mt-5">To the project <img id="arrow" src="assets/right-arrow-smaller.png"
+                    <img id="white-circle" src="assets/icons/White-Circle.png" alt="white circle">
+                    <h3 class="mt-5">To the project <img id="arrow" src="assets/icons/right-arrow-smaller.png"
                             alt="arrow right"></h3>
                     <div class="quote-title margin-right mt-5 d-flex justify-content-evenly bold">Make a plant your
                         companion
@@ -78,8 +71,8 @@
     </section><!-- End Hero Section -->
 
     <!-- <Main> -->
-    <main>
-        <article class="flow">
+    <main class="team-section">
+        <article id="about-us" class="flow">
             <h1 class="team-title">Our Team</h1>
             <p>Meet the team behind our plant monitoring project. Our experts bring diverse skills to ensure success.
             </p>
@@ -132,6 +125,43 @@
             </div>
         </article>
     </main>
+
+    <!-- Footer -->
+    <footer class="card text-center">
+        <div class="card-body">
+            <img class="nav text-align-center" src="Assets/logo/logo-PDM-small.png" alt="">
+            <nav>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Our Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">GR/ENG</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="nav justify-content-center">
+                <li class="space">
+                    <p>E: pdm_project@gmail.com</p>
+                </li>
+                <li class="space2">
+                    <p>Loc: Thessaloniki/Greece</p>
+                </li>
+            </ul>
+            <p>© Copyright 2022 PDM.com, All Rights Reserved</p>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
 
 </body>
 <!--Fontawesome-Icons-->
