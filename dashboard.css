@@ -1,14 +1,55 @@
 
-
-
-h2{
+#dashboard h2{
+    margin-top: 120px;
     font-size: 64px;
-    font-weight: 300;
+    font-weight: 400;
+}
+#first-section {
+  display: flex;
+  align-items: center;
 }
 
-#first-section img{
-    height: 149px;
+.element-images{
+  height: 20px;
+  width: auto;
+}
+.weather{
+    margin-top: 110px;
+}
+
+.weather img{
+    height: 100px;
     width: auto;
+}
+.weather h3{
+  font-size: 50px;
+}
+
+.element-container {
+  background-color: #e2e2e2 ;
+  border-radius: 80%;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  transform: translate(55px,-50px);
+  z-index: 1;
+}
+
+.element-temp {
+  transform: translate(50px,-50px);
+}
+
+.styled-underline {
+  border-top: 4px solid rgb(83, 83, 83);
+  height: 4px;
+  width: 350px;
+  margin-top: 5px;
+}
+.leaf{
+  position: absolute;
+  transform: translate(250px,-120px);
+  height: 150px;
 }
 
 sup,sub {
@@ -20,17 +61,42 @@ sup,sub {
 }
 
 .background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  width: 70%;
   height: 100%;
+  color: #016544;
 }
 
 .overlay-image {
   position: absolute;
-    top: 392px;
-    left: 271px;
+    transform: translate(70px, 430px);
     width: 50px;
     height: 50px;
+}
+/* thunder icon*/
+
+/* progress cicles */
+.circle {
+	width: 200px;
+	margin: 6px 20px 20px;
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	vertical-align: top;
+}
+
+.circle strong {
+	position: absolute;
+	top: 65px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	line-height: 45px;
+	font-size: 30px;
+}
+
+.barOverflow {
+	position: absolute;
+	overflow: hidden;
+	width: 90px;
+	height: 75px;
 }

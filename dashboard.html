@@ -23,7 +23,7 @@
 <body>
     <!-- ======= Header ======= -->
     <header>
-        <nav id="nav" class="navbar navbar-expand-lg fixed-top">
+        <nav id="nav" class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="#"><img id="image" src="Assets/logo/logo-PDM-small.png" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -33,11 +33,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        <a class="nav-link" href="#">About Us</a>
-                        <a class="nav-link" href="#">Our Project</a>
-                        <a class="nav-link" href="#">Contact</a>
-                        <a class="nav-link" href="#">GR/ENG</a>
+                        <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+                        <a class="nav-link" href="/index.html#about-us">About Us</a>
+                        <a class="nav-link active" href="">Our Project</a>
+                        <a class="nav-link" href="/contact">Contact</a>
+                        <a class="nav-link" href="/gr">GR/ENG</a>
                     </div>
                 </div>
             </div>
@@ -46,59 +46,80 @@
     <!-- End Header -->
 
     <!-- <Main> -->
-    <main class="container">
-        <div id="first-section" class="d-flex justify-content-bewteen">
+    <main id="dashboard" class="container">
+        <div id="first-section" class="d-flex justify-content-between mb-4">
             <div>
-                <h2>Mentha</h2>
-                <img src="/assets/icons/leaf.png" alt="leaf icon">
+                <h2 class="styled-heading">
+                    Mentha
+                </h2>
+                <div class="styled-elements">
+                    <div class="styled-underline"></div>
+                </div>
+                <img class="leaf" src="/assets/icons/leaf.png" alt="leaf icon">
             </div>
             <div>
-                <h3>20<sup>o</sup></h3>
-                <img src="/assets/icons/sun.png" alt="sun icon">
+                <div class="weather d-flex align-items-center">
+                    <h3 id="temperature">Loading...</h3>
+                    <img src="/assets/icons/sun.png" alt="sun icon">
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-6">
-                <h4>From the Environment in the House</h4>
+                <h4 class="mb-3">From the Environment in the House</h4>
                 <div class="row">
                     <div class="col-6">
-                        <img src="" alt="">
-                        <h3>20<sub>%</sub></h3>
-                        <span><img src="/assets/icons/humidity.png" alt="humidity icon">Humidity</span>
+                        <div class="first circle">
+                            <strong></strong>
+                        </div>
+                        <div class="element-container">
+                            <img class="element-images" src="/assets/icons/humidity.png" alt="humidity icon">
+                            <span>Humidity</span>
+                        </div>
                     </div>
                     <div class="col-6">
-                        <img src="" alt="">
-                        <h3>20<sup>o</sup></h3>
-                        <span><img src="/assets/icons/Temperature.png" alt="Temperature icon">Temp</span>
+                        <div class="second circle">
+                            <strong></strong>
+                        </div>
+                        <div class="element-container element-temp">
+                            <img class="element-images" src="/assets/icons/Temperature.png" alt="Temperature icon">
+                            <span>Tempature</span>
+                        </div>
                     </div>
                 </div>
-                <h4 class="mt-3">From the soil of the Plant</h4>
+                <h4 class="my-3">From the soil of the Plant</h4>
                 <div class="row">
                     <div class="col-6">
-                        <img src="" alt="">
-                        <h3>20<sub>%</sub></h3>
-                        <span><img src="/assets/icons/moisture.png" alt="Moisture icon">Moisture</span>
+                        <div class="third circle">
+                            <strong></strong>
+                        </div>
+                        <div class="element-container">
+                            <img class="element-images" src="/assets/icons/moisture.png" alt="Moisture icon">
+                            <span>Moisture</span>
+                        </div>
                     </div>
                     <div class="col-6">
-                        <img src="" alt="">
-                        <h3>20<sup>o</sup></h3>
-                        <span><img src="/assets/icons/Temperature.png" alt="Temperature icon">Temp</span>
+                        <div class="fourth circle">
+                            <strong></strong>
+                        </div>
+                        <div class="element-container element-temp">
+                            <img class="element-images" src="/assets/icons/Temperature.png" alt="Temperature icon">
+                            <span>Tempature</span>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col-6 image-container">
+            <div class="col-6 d-flex justify-content-center image-container">
                 <img src="/assets/plant-dashboard-3.png" class="background-image" alt="plant display">
                 <img src="/assets/icons/flash (2).png" class="overlay-image" alt="flash icon">
             </div>
-
         </div>
     </main>
 
     <!-- Footer -->
     <footer class="card text-center">
         <div class="card-body">
-            <img class="nav text-align-center" src="Assets/logo/logo-PDM-small.png" alt="">
+            <img class="nav justify-content-center" src="Assets/logo/logo-PDM-small.png" alt="">
             <nav>
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
@@ -139,7 +160,11 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
-
+<!--JQuery-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://rawgit.com/kottenator/jquery-circle-progress/1.2.2/dist/circle-progress.js"></script>
+<!--Custom Js-->
 <script src="main.js"></script>
 
 </html>
