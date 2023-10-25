@@ -1,0 +1,38 @@
+3.1 Home:
+app.get('/', (req, res) => {
+    res.render('home');
+});
+3.2 About Us:
+app.get('/about-us', (req, res) => {
+    res.render('about-us');
+});
+3.3 Dashboard:
+app.get('/dashboard', async (req, res) => {
+    let environmentData = await db.collection('environment').doc('house').get();
+    let soilData = await db.collection('soil').doc('plant').get();
+    let solarPanelData = await db.collection('solarPanel').doc('status').get();
+
+    res.render('dashboard', {
+        humidityLevel: environmentData.data().humidity,
+        houseTemperature: environmentData.data().temperature,
+        soilMoistureLevel: soilData.data().moisture,
+        plantTemperature: soilData.data().temperature,
+        solarPanelStatus: solarPanelData.data().isActive
+    });
+});
+
+3.4 Contact Us:
+app.get('/contact-us', (req, res) => {
+    res.render('contact-us');
+});
+
+app.post('/contact-us', async (req, res) => {
+    let contactInfo = {
+        name: req.body.name,
+        email: req.body.email,
+        message: req.body.message
+    };
+
+    await db.collection('contacts').add(contactInfo);
+    res.redirect('/thank-you');  // Redirect to a thank you page or display a message.
+});

@@ -117,7 +117,7 @@ header{
     height: 50rem;
     position: absolute;
     z-index: -1;
-    transform: translate( 572px);
+    transform: translate( 640px);
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 90%);
 }
 
