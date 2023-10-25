@@ -1,70 +1,72 @@
 <% layout('layouts/boilerplate')%>
-<div class="row">
-    <h1 class="text-center">Edit Campground</h1>
-    <div class="col-md-6 offset-md-3">
-        <form action="/campgrounds/<%=campground._id%>?_method=PUT" method="POST" novalidate class="validated-form"
-            enctype="multipart/form-data">
-            <div class="mb-3">
-                <label class="form-label" for="title">Title</label>
-                <input class="form-control" type="text" id="title" name="campground[title]"
-                    value="<%=campground.title %>" required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="location">Location</label>
-                <input class="form-control" type="text" id="location" name="campground[location]"
-                    value="<%=campground.location %>" required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-            </div>
 
-            <div class="mb-3">
-                <label class="form-label" for="price">Campground Price</label>
-                <div class="input-group">
-                    <span class="input-group-text" id="price-label">$</span>
-                    <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price"
-                        aria-describedby="price-label" name="campground[price]" value="<%=campground.price %>"
-                        required>\<div class="valid-feedback">
-                        Looks good!
+    <!-- <Main> -->
+    <section id="dashboard" class="container">
+        <div id="first-section" class="d-flex justify-content-between mb-4">
+            <div>
+                <h2 class="styled-heading">
+                    Mentha
+                </h2>
+                <div class="styled-elements">
+                    <div class="styled-underline"></div>
+                </div>
+                <img class="leaf" src="/assets/icons/leaf.png" alt="leaf icon">
+            </div>
+            <div>
+                <div class="weather d-flex align-items-center">
+                    <h3 id="temperature">Loading...</h3>
+                    <img src="/assets/icons/sun.png" alt="sun icon">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <h4 class="mb-3">From the Environment in the House</h4>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="first circle">
+                            <strong></strong>
+                        </div>
+                        <div class="element-container">
+                            <img class="element-images" src="/assets/icons/humidity.png" alt="humidity icon">
+                            <span>Humidity</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="second circle">
+                            <strong></strong>
+                        </div>
+                        <div class="element-container element-temp">
+                            <img class="element-images" src="/assets/icons/Temperature.png" alt="Temperature icon">
+                            <span>Tempature</span>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="my-3">From the soil of the Plant</h4>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="third circle">
+                            <strong></strong>
+                        </div>
+                        <div class="element-container">
+                            <img class="element-images" src="/assets/icons/moisture.png" alt="Moisture icon">
+                            <span>Moisture</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="fourth circle">
+                            <strong></strong>
+                        </div>
+                        <div class="element-container element-temp">
+                            <img class="element-images" src="/assets/icons/Temperature.png" alt="Temperature icon">
+                            <span>Tempature</span>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="mb-3">
-                <label class="form-label" for="description">Description</label>
-                <textarea class="form-control" type="text" id="description" name="campground[description]"
-                    required><%= campground.description%></textarea>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
+            <div class="col-6 d-flex justify-content-center image-container">
+                <img src="/assets/plant-dashboard-3.png" class="background-image" alt="plant display">
+                <img src="/assets/icons/flash (2).png" class="overlay-image" alt="flash icon">
             </div>
-            <div class="mb-3">
-                <div class="form-file custom-file">
-                    <input type="file" class="form-file-input" id="image" name="image" multiple>
-                    <label class="form-file-label" for="image">
-                        <span class="form-file-text custom-file-label">Add more image(s)...</span>
-                        <span class="form-file-button">Browse</span>
-                    </label>
-                </div>
-            </div>
-            <div class="mb-3">
-                <% campground.images.forEach(function(img, i) {  %>
-
-                <img src="<%=img.thumbnail %>" class="img-thumbnail" alt="">
-                <div class="form-check-inline">
-                    <input type="checkbox" id="image-<%=i%>" name="deleteImages[]" value="<%=img.filename%>">
-                </div>
-                <label for="image-<%=i%>">Delete?</label>
-                <% })%>
-            </div>
-            <div class="mb-3">
-                <button class="btn btn-info">Update Campground</button>
-            </div>
-        </form>
-        <a href="/campgrounds/<%= campground._id%>">Back To Campground</a>
-
-    </div>
-</div>
+        </div>
+    </section>

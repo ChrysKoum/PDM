@@ -8,24 +8,19 @@ const router = express.Router();
 router.get("/", (req, res) => {
   const lang = req.session.lang || "en";
   const translations = require(`../locales/${lang}.json`);
-  res.render("home", { translations });
+  res.render("home", { lang: req.session.lang || "en" });
 });
 
 router.get("/about-us", (req, res) => {
-  res.render("about-us", { lang: req.session.lang || "en" });
+  res.render("home", { lang: req.session.lang || "en", anchor: "about-us" });
 });
 
 router.get("/dashboard", async (req, res) => {
+  res.render("dashboard", { lang: req.session.lang || "en" });
   // Fetch data from Firebase
   //let humidityData = await firebase.getHumidityData();
   //let temperatureData = await firebase.getTemperatureData();
   // ... fetch other data
-  res.render("dashboard", {
-    //humidityData,
-    //temperatureData,
-    //lang: req.session.lang || "ENG",
-    // ... other data
-  });
 });
 
 router.get("/contact-us", (req, res) => {
