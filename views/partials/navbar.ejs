@@ -1,0 +1,24 @@
+<header>
+    <nav id="nav" class="navbar navbar-expand-lg fixed-dashboard">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img id="image" src="Assets/logo/logo-PDM-small.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link <%= currentPage === 'home' ? 'active' : '' %>" aria-current="page"
+                        href="/">Home</a>
+                    <a class="nav-link <%= currentPage === 'about' ? 'active' : '' %>" href="/#about-us">About Us</a>
+                    <a class="nav-link <%= currentPage === 'project' ? 'active' : '' %>" href="/dashboard">Our
+                        Project</a>
+                    <a class="nav-link <%= currentPage === 'contact' ? 'active' : '' %>" href="/contact-us">Contact</a>
+                    <!-- <a class="nav-link" href="/gr">GR/ENG</a> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

@@ -66,14 +66,23 @@ sup,sub {
   color: #016544;
 }
 
+/* thunder icon*/
 .overlay-image {
   position: absolute;
-    transform: translate(70px, 430px);
-    width: 50px;
-    height: 50px;
+  transform: translate(70px, 430px);
+  width: 50px;
+  height: 50px;
 }
-/* thunder icon*/
 
+@media (max-width: 1400px) {
+	.overlay-image {
+		transform: translate(70px, 369px);
+	}
+}
+#nav .container {
+    background-color: #e2e2e2;
+    z-index: 1000;
+}
 /* progress cicles */
 .circle {
 	width: 200px;
@@ -99,4 +108,14 @@ sup,sub {
 	overflow: hidden;
 	width: 90px;
 	height: 75px;
+}
+
+
+@media (max-width: 768px) {
+  .weather{
+    display: none;
+  }
+  .overlay-image {
+    transform: translate(70px, 265px);
+  }
 }

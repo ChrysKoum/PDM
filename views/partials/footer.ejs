@@ -1,0 +1,52 @@
+<!-- Footer -->
+<footer class="card text-center mb-3">
+    <div class="card-body">
+        <img class="mx-auto d-block" src="assets/logo/logo-PDM-small.png" alt="">
+
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about-us">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/dashboard">Our Project</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact-us">Contact</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="/gr">GR/ENG</a>
+                </li> -->
+            </ul>
+        </nav>
+
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <p>E: pdm_project@gmail.com</p>
+            </li>
+            <li class="nav-item">
+                <p>Loc: Thessaloniki/Greece</p>
+            </li>
+        </ul>
+
+        <span id="dateDisplay"></span>
+    </div>
+</footer>
+<!-- End Footer -->
+
+<script>
+    (function () {
+        const today = new Date();
+        const year = today.getFullYear(); // Get the full year
+        const yearStr = year.toString();
+
+        // Construct the text with the dynamic year
+        const copyrightText = `© Copyright ${yearStr} PDM-Project.com, All Rights Reserved`;
+
+        // Update the textContent of the element with id 'dateDisplay'
+        document.getElementById('dateDisplay').textContent = copyrightText;
+    })();
+</script>
