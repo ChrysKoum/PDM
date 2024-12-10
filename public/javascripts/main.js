@@ -2,7 +2,7 @@
 $(function () {
   // Replace 'YOUR_OPENWEATHERMAP_API_KEY' with your actual API key from OpenWeatherMap
   const apiKey = "f32769cb412055395c07bcd8bfe80f8b";
-  const city = "Limassol, CY"; // Replace with the city name you want to fetch weather for
+  const city = "Thessaloniki, GR"; // Replace with the city name you want to fetch weather for
 
   // Function to fetch weather data from OpenWeatherMap API and update the temperature in the heading
   function fetchWeatherData() {
